@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 const Home = () => {
   return (
@@ -16,12 +17,14 @@ const Home = () => {
             <form action="" className="mt-8 flex items-start space-x-2">
               
               <div>
+                <Link to="/body">
                 <button
                   type="button"
                   className="rounded-md bg-[#F50157] px-3 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   Build your Resume
                 </button>
+                </Link>
               </div>
             </form>
           </div>
