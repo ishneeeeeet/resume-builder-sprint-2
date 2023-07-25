@@ -1,5 +1,5 @@
 import * as React from "react";
-const BusinessOne = ({ resume }) => (
+const BusinessOne = ({ info }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
@@ -642,7 +642,7 @@ const BusinessOne = ({ resume }) => (
                 <g clipPath="url(#clp59)">
                   <text className="ps00" transform="translate(429.762 185.5)">
                     <tspan xmlSpace="preserve" className="ps03 ps21">
-                      {resume.email}
+                      {info.email}
                     </tspan>
                   </text>
                 </g>
@@ -784,7 +784,7 @@ const BusinessOne = ({ resume }) => (
                 <g clipPath="url(#clp72)">
                   <text className="ps00" transform="translate(35 75)">
                     <tspan xmlSpace="preserve" className="ps02 ps25">
-                      {resume.fname}
+                      {info.basicInfo?.detail?.name}
                     </tspan>
                   </text>
                 </g>
@@ -799,7 +799,7 @@ const BusinessOne = ({ resume }) => (
                       x="0,20.592,42.192,52.74,72.18"
                       className="ps02 ps25"
                     >
-                      {resume.lname}
+                      {info.lname}
                     </tspan>
                   </text>
                 </g>

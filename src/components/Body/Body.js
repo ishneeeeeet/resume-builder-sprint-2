@@ -22,8 +22,7 @@ function Body() {
   const resumeRef = useRef();
 
   const [activeColor, setActiveColor] = useState(colors[0]);
-  
-  
+
   const [resumeInformation, setResumeInformation] = useState({
     [sections.basicInfo]: {
       id: sections.basicInfo,
@@ -64,20 +63,8 @@ function Body() {
 
   return (
     <div className={styles.container}>
-      <p className={styles.heading}></p>
       <div className={styles.toolbar}>
-        <div className={styles.colors}>
-          {colors.map((item) => (
-            <span
-              key={item}
-              style={{ backgroundColor: item }}
-              className={`${styles.color} ${
-                activeColor === item ? styles.active : ""
-              }`}
-              onClick={() => setActiveColor(item)}
-            />
-          ))}
-        </div>
+        <div className={styles.colors}></div>
         <ReactToPrint
           trigger={() => {
             return (

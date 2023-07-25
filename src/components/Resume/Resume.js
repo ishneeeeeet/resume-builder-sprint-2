@@ -1,4 +1,10 @@
-import React, { forwardRef, useContext, useEffect, useRef, useState } from "react";
+import React, {
+  forwardRef,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   AtSign,
   Calendar,
@@ -11,6 +17,7 @@ import {
 
 import styles from "./Resume.module.css";
 import { resumeContext } from "../../context";
+import BusinessOne from "../../templates/BusinessOne";
 
 const Resume = forwardRef((props, ref) => {
   const information = props.information;
@@ -306,7 +313,8 @@ const Resume = forwardRef((props, ref) => {
 
   switch (resume.course) {
     case "Information Technology":
-      break;
+      return <BusinessOne resume={info} />;
+     
 
     default:
       break;
@@ -314,7 +322,7 @@ const Resume = forwardRef((props, ref) => {
 
   return (
     <div ref={ref}>
-      <div  className={styles.container}>
+      <div className={styles.container}>
         <div className={styles.header}>
           <p className={styles.heading}>{info.basicInfo?.detail?.name}</p>
           <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>
