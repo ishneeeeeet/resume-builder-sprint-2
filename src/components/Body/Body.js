@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import ReactToPrint from "react-to-print";
 import { ArrowDown } from "react-feather";
 
@@ -6,6 +6,7 @@ import Editor from "../Editor/Editor";
 import Resume from "../Resume/Resume";
 
 import styles from "./Body.module.css";
+import { resumeContext } from "../../context";
 
 function Body() {
   const colors = ["#F50157", "#48bb78", "#0bc5ea", "#a0aec0", "#ed8936"];
@@ -21,7 +22,8 @@ function Body() {
   const resumeRef = useRef();
 
   const [activeColor, setActiveColor] = useState(colors[0]);
-  const [course, setCourse] = useState("")
+  
+  
   const [resumeInformation, setResumeInformation] = useState({
     [sections.basicInfo]: {
       id: sections.basicInfo,

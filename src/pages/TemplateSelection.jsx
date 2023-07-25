@@ -57,7 +57,7 @@ function TemplateSelection() {
       ...prevResume,
       template: temp.name,
     }));
-    navigate("/personalinfo");
+    navigate("/body");
   };
 
   return (

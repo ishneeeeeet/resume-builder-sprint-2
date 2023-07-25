@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import React, { forwardRef, useContext, useEffect, useRef, useState } from "react";
 import {
   AtSign,
   Calendar,
@@ -10,6 +10,7 @@ import {
 } from "react-feather";
 
 import styles from "./Resume.module.css";
+import { resumeContext } from "../../context";
 
 const Resume = forwardRef((props, ref) => {
   const information = props.information;
@@ -19,7 +20,7 @@ const Resume = forwardRef((props, ref) => {
   const [columns, setColumns] = useState([[], []]);
   const [source, setSource] = useState("");
   const [target, seTarget] = useState("");
-
+  const { resume, setResume } = useContext(resumeContext);
   const info = {
     workExp: information[sections.workExp],
     project: information[sections.project],
@@ -303,9 +304,17 @@ const Resume = forwardRef((props, ref) => {
     container.style.setProperty("--color", props.activeColor);
   }, [props.activeColor]);
 
+  switch (resume.course) {
+    case "Information Technology":
+      break;
+
+    default:
+      break;
+  }
+
   return (
     <div ref={ref}>
-      <div ref={containerRef} className={styles.container}>
+      <div  className={styles.container}>
         <div className={styles.header}>
           <p className={styles.heading}>{info.basicInfo?.detail?.name}</p>
           <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>
