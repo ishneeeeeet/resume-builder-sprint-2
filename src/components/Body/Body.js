@@ -21,6 +21,7 @@ function Body() {
   const resumeRef = useRef();
 
   const [activeColor, setActiveColor] = useState(colors[0]);
+  const [course, setCourse] = useState("")
   const [resumeInformation, setResumeInformation] = useState({
     [sections.basicInfo]: {
       id: sections.basicInfo,
