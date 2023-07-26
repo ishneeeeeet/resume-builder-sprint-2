@@ -11,7 +11,7 @@ const navigation = [
     href: "/sign-in",
     current: false,
   },
-  { name: "Logout", href:"/sign-out", current: false },
+  { name: "Logout", href:"/", current: false },
 ];
 
 function classNames(...classes) {
