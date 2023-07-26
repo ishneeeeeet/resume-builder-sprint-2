@@ -490,6 +490,14 @@ function Editor(props) {
     
     setActiveSectionKey(nextSectionKey);
   };
+  const handlePreviousButton = () => {
+    const sectionKeys = Object.keys(sections);
+    const currentIndex = sectionKeys.indexOf(activeSectionKey);
+    const previousIndex = (currentIndex - 1 + sectionKeys.length) % sectionKeys.length;
+    const previousSectionKey = sectionKeys[previousIndex];
+
+    setActiveSectionKey(previousSectionKey);
+  };
 
   const handleAddNew = () => {
     const details = activeInformation?.details;
@@ -654,9 +662,13 @@ function Editor(props) {
         </div>
 
         {generateBody()}
+        <div className="flex ">
 
+        <button onClick={handlePreviousButton}>Previous</button>
         <button onClick={handleSubmission}>Save</button>
         <button onClick={handleNextButton}>Next</button>
+        </div>
+        
       </div>
     </div>
   );
