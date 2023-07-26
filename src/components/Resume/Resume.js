@@ -23,6 +23,7 @@ const Resume = forwardRef((props, ref) => {
   const information = props.information;
   const sections = props.sections;
   const containerRef = useRef();
+  
 
   const [columns, setColumns] = useState([[], []]);
   const [source, setSource] = useState("");
@@ -37,6 +38,27 @@ const Resume = forwardRef((props, ref) => {
     summary: information[sections.summary],
     other: information[sections.other],
   };
+  const [infoState, setInfo] = useState({
+    workExp: information[sections.workExp],
+    project: information[sections.project],
+    achievement: information[sections.achievement],
+    education: information[sections.education],
+    basicInfo: information[sections.basicInfo],
+    summary: information[sections.summary],
+    other: information[sections.other],
+  });
+  useEffect(() => {
+    const newInfo = {
+      workExp: information[sections.workExp],
+      project: information[sections.project],
+      achievement: information[sections.achievement],
+      education: information[sections.education],
+      basicInfo: information[sections.basicInfo],
+      summary: information[sections.summary],
+      other: information[sections.other],
+    };
+    setInfo(newInfo);
+  }, [information, sections]);
 
   const getFormattedDate = (value) => {
     if (!value) return "";
