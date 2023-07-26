@@ -311,14 +311,14 @@ const Resume = forwardRef((props, ref) => {
     container.style.setProperty("--color", props.activeColor);
   }, [props.activeColor]);
 
-  // switch (resume.course) {
-  //   case "Information Technology":
-  //     return <BusinessOne resume={info} />;
+  switch (resume.course) {
+    case "Information Technology":
+      return <BusinessOne resume={info} />;
      
 
-  //   default:
-  //     break;
-  // }
+    default:
+      break;
+  }
 
   return (
     <div ref={ref}>
