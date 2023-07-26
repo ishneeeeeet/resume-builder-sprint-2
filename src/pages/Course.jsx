@@ -36,16 +36,20 @@ function Course() {
         <Loading />
       ) : (
         <div className="h-screen flex flex-col items-center justify-center">
-          <h1 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-4xl dark:text-white text-center">
-            What program are you studying at <span class="text-[#F50157] dark:text-blue-500">SAIT ?</span>
+          <h1 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-4xl  text-center">
+            What program are you studying at{" "}
+            <span class="text-[#F50157]">SAIT ?</span>
           </h1>
           <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">
-            We need to know your field of study so that we can tailor your resume making process accordingly.
+            We need to know your field of study so that we can tailor your
+            resume making process accordingly.
           </p>
           <Listbox value={selected} onChange={handleCourseSelection}>
             <div className="relative mt-1">
               <Listbox.Button className="relative w-full cursor-default rounded-lg bg-[#F50157] py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
-                <span className=" text-white block truncate">{selected.name}</span>
+                <span className=" text-white block truncate">
+                  {selected.name}
+                </span>
                 <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                   <ChevronUpDownIcon
                     className="h-5 w-5 text-white"
