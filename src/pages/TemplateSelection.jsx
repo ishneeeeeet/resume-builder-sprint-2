@@ -63,10 +63,10 @@ function TemplateSelection() {
   return (
     <>
       <div className="flex items-center justify-center">
-        <h1 class=" mt-20 mb-10 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl dark:text-white">
+        <h1 class=" mt-20 mb-10 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl ">
           Templates specially {" "}
-          <span class="text-[#F50157] dark:text-blue-500">curated</span>{" "}
-          for your <span class="text-[#F50157] dark:text-blue-500">industry</span> needs.
+          <span class="text-[#F50157] ">curated</span>{" "}
+          for your <span class="text-[#F50157] ">industry</span> needs.
         </h1>
       </div>
       <div className="flex flex-wrap justify-center items-center">

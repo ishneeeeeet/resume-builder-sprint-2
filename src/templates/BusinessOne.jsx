@@ -642,7 +642,7 @@ const BusinessOne = ({ info }) => (
                 <g clipPath="url(#clp59)">
                   <text className="ps00" transform="translate(429.762 185.5)">
                     <tspan xmlSpace="preserve" className="ps03 ps21">
-                      {info.email}
+                      {"email"}
                     </tspan>
                   </text>
                 </g>
@@ -799,7 +799,7 @@ const BusinessOne = ({ info }) => (
                       x="0,20.592,42.192,52.74,72.18"
                       className="ps02 ps25"
                     >
-                      {info.lname}
+                      {"lname"}
                     </tspan>
                   </text>
                 </g>
