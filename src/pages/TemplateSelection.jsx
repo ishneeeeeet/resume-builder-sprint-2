@@ -16,12 +16,12 @@ function TemplateSelection() {
           img: "https://i.ibb.co/kx3wPKz/templateone.png",
         },
         {
-          name: "templatetwo",
+          name: "templatewo",
           display: "Template 2",
           img: "https://i.ibb.co/zbj5MGJ/templatetwo.png",
         },
         {
-          name: "templatethree",
+          name: "templatehree",
           display: "Template 3",
           img: "https://i.ibb.co/Sr0Sgmq/templatethree.png",
         },
@@ -31,17 +31,17 @@ function TemplateSelection() {
     case "Business Administration":
       templates = [
         {
-          name: "templatefour",
+          name: "templateour",
           display: "Template 1",
           img: "https://i.ibb.co/vjDNxBw/templatefour.png",
         },
         {
-          name: "templatefive",
+          name: "templateive",
           display: "Template 2",
           img: "https://i.ibb.co/Bq4bT23/templatefive.png",
         },
         {
-          name: "templatesix",
+          name: "templateix",
           display: "Template 3",
           img: "https://i.ibb.co/KrHXYkk/templatesix.png",
         },

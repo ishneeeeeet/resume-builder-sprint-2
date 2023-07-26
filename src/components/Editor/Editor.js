@@ -168,7 +168,7 @@ function Editor(props) {
           onChange={(event) => handlePointUpdate(event.target.value, 1)}
         />
         <InputControl
-          placeholder="Line 3"
+          placeholder="Line 3"f
           value={values.points ? values.points[2] : ""}
           onChange={(event) => handlePointUpdate(event.target.value, 2)}
         />
@@ -662,11 +662,11 @@ function Editor(props) {
         </div>
 
         {generateBody()}
-        <div className="flex ">
+        <div className="flex">
 
-        <button onClick={handlePreviousButton}>Previous</button>
-        <button onClick={handleSubmission}>Save</button>
-        <button onClick={handleNextButton}>Next</button>
+        <button className="ml-3" onClick={handlePreviousButton}>Previous</button>
+        <button className="ml-3" onClick={handleSubmission}>Save</button>
+        <button className="ml-3" onClick={handleNextButton}>Next</button>
         </div>
         
       </div>
