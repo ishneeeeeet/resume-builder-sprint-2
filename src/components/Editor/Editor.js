@@ -354,6 +354,7 @@ function Editor(props) {
   };
 
   const handleSubmission = () => {
+    // eslint-disable-next-line default-case
     switch (sections[activeSectionKey]) {
       case sections.basicInfo: {
         const tempDetail = {
@@ -373,6 +374,7 @@ function Editor(props) {
             sectionTitle,
           },
         }));
+
         break;
       }
       case sections.workExp: {
@@ -480,6 +482,14 @@ function Editor(props) {
       }
     }
   };
+  const handleNextButton = () => {
+    const sectionKeys = Object.keys(sections);
+    const currentIndex = sectionKeys.indexOf(activeSectionKey);
+    const nextIndex = (currentIndex + 1) % sectionKeys.length;
+    const nextSectionKey = sectionKeys[nextIndex];
+    
+    setActiveSectionKey(nextSectionKey);
+  };
 
   const handleAddNew = () => {
     const details = activeInformation?.details;
@@ -532,9 +542,7 @@ function Editor(props) {
       companyName: activeInfo?.details
         ? activeInfo.details[0]?.companyName || ""
         : "",
-      college: activeInfo?.details
-        ? activeInfo.details[0]?.college || ""
-        : "",
+      college: activeInfo?.details ? activeInfo.details[0]?.college || "" : "",
       location: activeInfo?.details
         ? activeInfo.details[0]?.location || ""
         : "",
@@ -648,6 +656,7 @@ function Editor(props) {
         {generateBody()}
 
         <button onClick={handleSubmission}>Save</button>
+        <button onClick={handleNextButton}>Next</button>
       </div>
     </div>
   );
