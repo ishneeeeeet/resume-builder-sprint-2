@@ -356,7 +356,7 @@ const Resume = forwardRef((props, ref) => {
               <div
                 className="caps name"
                 style={{
-                  position: "absolute",
+                 
                   top: 0,
                   left: 0,
                   bottom: "calc(350px + 5%)",
