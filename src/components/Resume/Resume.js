@@ -394,15 +394,10 @@ const Resume = forwardRef((props, ref) => {
             <span className="c4">{info.basicInfo?.detail?.email}</span>
           </p>
           <h1 className="c3" id="h.inx73jfg7qti">
-            <span className="c9">SKILLS</span>
+            <span className="c9">Summary</span>
           </h1>
           <p className="c19">
-            <span className="c16">L</span>
-            <span>orem ipsum dol</span>
-            <span className="c16">
-              or sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            </span>
+            <span className="c16">{info.summary?.detail}</span>
           </p>
           <h1 className="c18" id="h.5sh58lh512k2">
             <span className="c17">EXPERIENCE</span>
@@ -411,92 +406,76 @@ const Resume = forwardRef((props, ref) => {
             return (
               <div>
                 <h2 className="c7" id="h.mu43qcboozqe">
-                  <span className="c1">{item.companyName} &nbsp;Location</span>
-                  <span className="c2">&nbsp;- Job Title</span>
-                </h2>
-                <p className="c6">
-                  <span className="c15 c10">MONTH 20XX - PRESENT</span>
-                </p>
-                <ul className="c13 lst-kix_q43nwmkvrt8-0 start">
-                  <li className="c5 li-bullet-0">
-                    <span className="c8">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </span>
-                  </li>
-                  <li className="c5 li-bullet-0">
-                    <span className="c8">
-                      Aenean ac interdum nisi. Sed in consequat mi.
-                    </span>
-                  </li>
-                </ul>
-                <h2 className="c7" id="h.25ksbxwbal7a">
-                  <span className="c1">Company Name, Location</span>
+                  <span className="c1">
+                    {item.companyName} &nbsp;{item.location}
+                  </span>
                   <span className="c2">&nbsp;- {item.title}</span>
                 </h2>
                 <p className="c6">
-                  <span className="c15 c10">MONTH 20XX - MONTH 20XX</span>
+                  <span className="c15 c10">
+                    {getFormattedDate(item.startDate)} -{" "}
+                    {getFormattedDate(item.endDate)}
+                  </span>
                 </p>
-                <ul className="c13 lst-kix_71cy10c6bo5c-0 start">
-                  <li className="c5 li-bullet-0">
-                    <span className="c8">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </span>
-                  </li>
-                  <li className="c5 li-bullet-0">
-                    <span className="c8">
-                      Aenean ac interdum nisi. Sed in consequat mi.{" "}
-                    </span>
-                  </li>
-                </ul>
-                <h2 className="c7" id="h.qttiqnuhschn">
-                  <span className="c1">Company Name, Location</span>
-                  <span className="c2">&nbsp;- Job Title</span>
-                </h2>
-                <p className="c6">
-                  <span className="c15 c10">MONTH 20XX - MONTH 20XX</span>
-                </p>
-                <ul className="c13 lst-kix_dpieomdpoi58-0 start">
-                  <li className="c5 li-bullet-0">
-                    <span className="c8">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </span>
-                  </li>
-                  <li className="c5 li-bullet-0">
-                    <span className="c8">
-                      Aenean ac interdum nisi. Sed in consequat mi.{" "}
-                    </span>
-                  </li>
-                </ul>
+                {item.points?.length > 0 ? (
+                  <ul className="c13 lst-kix_q43nwmkvrt8-0 start">
+                    {item.points?.map((elem, index) => (
+                      <li className="c5 li-bullet-0" key={elem + index}>
+                        <span className="c8"></span>
+                        {elem}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <span />
+                )}
               </div>
             );
           })}
           <h1 className="c18" id="h.pwnp1k6vsbh1">
             <span className="c9">EDUCATION</span>
           </h1>
-          <h2 className="c7" id="h.jpv9v4b642w5">
-            <span className="c1">School Name, Location </span>
-            <span className="c2">- Degree</span>
-          </h2>
-          <p className="c6">
-            <span className="c10 c15">MONTH 20XX - MONTH 20XX</span>
-          </p>
-          <p className="c19">
-            <span className="c8">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore.
-            </span>
-          </p>
+          {info.education?.details?.map((item) => {
+            return (
+              <div>
+                <h2 className="c7" id="h.jpv9v4b642w5">
+                  <span className="c1">{item.college} </span>
+                  <span className="c2"> - {item.title}</span>
+                </h2>
+                <p className="c6">
+                  <span className="c10 c15">
+                    {getFormattedDate(item.startDate)} -{" "}
+                    {getFormattedDate(item.endDate)}
+                  </span>
+                </p>
+              </div>
+            );
+          })}
           <h1 className="c18" id="h.3hy8rkwzatey">
-            <span className="c9">AWARDS</span>
+            <span className="c9">PROJECTS</span>
           </h1>
-          <p className="c19">
-            <span className="c8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </span>
-          </p>
-          <p className="c19">
-            <span className="c16">Aenean ac interdum nisi.</span>
-          </p>{" "}
+          {info.project?.details?.map((item) => {
+            return (
+              <div>
+                <h2 className="c7" id="h.jpv9v4b642w5">
+                  <span className="c2">{item.title}</span>
+                </h2>
+                <span className="c16">{item.overview}</span>
+                {item.points?.length > 0 ? (
+                  <ul className="c13 lst-kix_q43nwmkvrt8-0 start">
+                    {item.points?.map((elem, index) => (
+                      <li className="c5 li-bullet-0" key={elem + index}>
+                        <span className="c8"></span>
+                        {elem}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <span />
+                )}
+              </div>
+            );
+          })}
         </div>
       );
 
