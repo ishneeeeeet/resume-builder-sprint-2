@@ -333,332 +333,174 @@ const Resume = forwardRef((props, ref) => {
   switch (resume.template) {
     case "templateone":
       return (
-        <div ref={ref} > 
-          <div
-            className="rela-block page"
-            style={{
-              width: "50%",
-              height: "50%",
-              maxWidth: "1200px",
-              margin: "80px auto",
-              backgroundColor: "white",
-              boxShadow: "6px 10px 28px 0px rgba(0, 0, 0, 0.4)",
+        <div ref={ref} className="flex-col justify-center">
+          <style
+            type="text/css"
+            dangerouslySetInnerHTML={{
+              __html:
+                '\n      @import url(https://themes.googleusercontent.com/fonts/css?kit=3qINvnjb346LubKDfLRn69t6G6Z1RrRfgULZ1AHo7mPOfsfM6rvuuu7h1pY3r_-A);\n      ul.lst-kix_q43nwmkvrt8-7 {\n        list-style-type: none;\n      }\n      ul.lst-kix_q43nwmkvrt8-6 {\n        list-style-type: none;\n      }\n      ul.lst-kix_q43nwmkvrt8-8 {\n        list-style-type: none;\n      }\n      ul.lst-kix_q43nwmkvrt8-3 {\n        list-style-type: none;\n      }\n      ul.lst-kix_q43nwmkvrt8-2 {\n        list-style-type: none;\n      }\n      ul.lst-kix_q43nwmkvrt8-5 {\n        list-style-type: none;\n      }\n      ul.lst-kix_q43nwmkvrt8-4 {\n        list-style-type: none;\n      }\n      ul.lst-kix_71cy10c6bo5c-8 {\n        list-style-type: none;\n      }\n      ul.lst-kix_71cy10c6bo5c-7 {\n        list-style-type: none;\n      }\n      ul.lst-kix_71cy10c6bo5c-6 {\n        list-style-type: none;\n      }\n      ul.lst-kix_71cy10c6bo5c-5 {\n        list-style-type: none;\n      }\n      ul.lst-kix_71cy10c6bo5c-4 {\n        list-style-type: none;\n      }\n      ul.lst-kix_71cy10c6bo5c-3 {\n        list-style-type: none;\n      }\n      ul.lst-kix_71cy10c6bo5c-2 {\n        list-style-type: none;\n      }\n      .lst-kix_q43nwmkvrt8-0 > li:before {\n        content: "\\0025cf   ";\n      }\n      .lst-kix_q43nwmkvrt8-1 > li:before {\n        content: "\\0025cb   ";\n      }\n      ul.lst-kix_71cy10c6bo5c-1 {\n        list-style-type: none;\n      }\n      ul.lst-kix_71cy10c6bo5c-0 {\n        list-style-type: none;\n      }\n      .lst-kix_q43nwmkvrt8-2 > li:before {\n        content: "\\0025a0   ";\n      }\n      .lst-kix_q43nwmkvrt8-4 > li:before {\n        content: "\\0025cb   ";\n      }\n      ul.lst-kix_dpieomdpoi58-0 {\n        list-style-type: none;\n      }\n      ul.lst-kix_dpieomdpoi58-1 {\n        list-style-type: none;\n      }\n      .lst-kix_q43nwmkvrt8-3 > li:before {\n        content: "\\0025cf   ";\n      }\n      ul.lst-kix_dpieomdpoi58-4 {\n        list-style-type: none;\n      }\n      .lst-kix_q43nwmkvrt8-8 > li:before {\n        content: "\\0025a0   ";\n      }\n      ul.lst-kix_dpieomdpoi58-5 {\n        list-style-type: none;\n      }\n      ul.lst-kix_dpieomdpoi58-2 {\n        list-style-type: none;\n      }\n      ul.lst-kix_dpieomdpoi58-3 {\n        list-style-type: none;\n      }\n      ul.lst-kix_dpieomdpoi58-8 {\n        list-style-type: none;\n      }\n      .lst-kix_q43nwmkvrt8-6 > li:before {\n        content: "\\0025cf   ";\n      }\n      ul.lst-kix_dpieomdpoi58-6 {\n        list-style-type: none;\n      }\n      .lst-kix_q43nwmkvrt8-5 > li:before {\n        content: "\\0025a0   ";\n      }\n      ul.lst-kix_dpieomdpoi58-7 {\n        list-style-type: none;\n      }\n      .lst-kix_dpieomdpoi58-1 > li:before {\n        content: "\\0025cb   ";\n      }\n      .lst-kix_dpieomdpoi58-2 > li:before {\n        content: "\\0025a0   ";\n      }\n      .lst-kix_q43nwmkvrt8-7 > li:before {\n        content: "\\0025cb   ";\n      }\n      .lst-kix_dpieomdpoi58-4 > li:before {\n        content: "\\0025cb   ";\n      }\n      .lst-kix_dpieomdpoi58-3 > li:before {\n        content: "\\0025cf   ";\n      }\n      .lst-kix_dpieomdpoi58-5 > li:before {\n        content: "\\0025a0   ";\n      }\n      .lst-kix_dpieomdpoi58-0 > li:before {\n        content: "\\0025cf   ";\n      }\n      .lst-kix_dpieomdpoi58-8 > li:before {\n        content: "\\0025a0   ";\n      }\n      .lst-kix_dpieomdpoi58-7 > li:before {\n        content: "\\0025cb   ";\n      }\n      .lst-kix_dpieomdpoi58-6 > li:before {\n        content: "\\0025cf   ";\n      }\n      .lst-kix_71cy10c6bo5c-5 > li:before {\n        content: "\\0025a0   ";\n      }\n      .lst-kix_71cy10c6bo5c-6 > li:before {\n        content: "\\0025cf   ";\n      }\n      .lst-kix_71cy10c6bo5c-7 > li:before {\n        content: "\\0025cb   ";\n      }\n      .lst-kix_71cy10c6bo5c-8 > li:before {\n        content: "\\0025a0   ";\n      }\n      .lst-kix_71cy10c6bo5c-3 > li:before {\n        content: "\\0025cf   ";\n      }\n      li.li-bullet-0:before {\n        margin-left: -18pt;\n        white-space: nowrap;\n        display: inline-block;\n        min-width: 18pt;\n      }\n      .lst-kix_71cy10c6bo5c-4 > li:before {\n        content: "\\0025cb   ";\n      }\n      .lst-kix_71cy10c6bo5c-2 > li:before {\n        content: "\\0025a0   ";\n      }\n      .lst-kix_71cy10c6bo5c-1 > li:before {\n        content: "\\0025cb   ";\n      }\n      ul.lst-kix_q43nwmkvrt8-1 {\n        list-style-type: none;\n      }\n      ul.lst-kix_q43nwmkvrt8-0 {\n        list-style-type: none;\n      }\n      .lst-kix_71cy10c6bo5c-0 > li:before {\n        content: "\\0025cf   ";\n      }\n      ol {\n        margin: 0;\n        padding: 0;\n      }\n      table td,\n      table th {\n        padding: 0;\n      }\n      .c5 {\n        margin-left: 36pt;\n        padding-top: 4pt;\n        padding-left: 0pt;\n        padding-bottom: 0pt;\n        line-height: 1.2;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .c4 {\n        color: #666666;\n        font-weight: 400;\n        text-decoration: none;\n        vertical-align: baseline;\n        font-size: 11pt;\n        font-family: "Proxima Nova";\n        font-style: normal;\n      }\n      .c2 {\n        color: #666666;\n        font-weight: 400;\n        text-decoration: none;\n        vertical-align: baseline;\n        font-size: 12pt;\n        font-family: "Proxima Nova";\n        font-style: italic;\n      }\n      .c14 {\n        padding-top: 20pt;\n        padding-bottom: 0pt;\n        line-height: 1.2;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n        height: 11pt;\n      }\n      .c8 {\n        color: #000000;\n        font-weight: 400;\n        text-decoration: none;\n        vertical-align: baseline;\n        font-size: 11pt;\n        font-family: "Proxima Nova";\n        font-style: normal;\n      }\n      .c0 {\n        padding-top: 6pt;\n        padding-bottom: 0pt;\n        line-height: 1;\n        page-break-after: avoid;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .c3 {\n        padding-top: 24pt;\n        padding-bottom: 10pt;\n        line-height: 1;\n        page-break-after: avoid;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .c11 {\n        color: #53bb84;\n        font-weight: 700;\n        text-decoration: none;\n        vertical-align: baseline;\n        font-size: 14pt;\n        font-family: "Proxima Nova";\n        font-style: normal;\n      }\n      .c9 {\n        color: #00ab44;\n        font-weight: 700;\n        text-decoration: none;\n        vertical-align: baseline;\n        font-size: 14pt;\n        font-family: "Proxima Nova";\n        font-style: normal;\n      }\n      .c15 {\n        font-weight: 400;\n        text-decoration: none;\n        vertical-align: baseline;\n        font-size: 10pt;\n        font-family: "Proxima Nova";\n        font-style: normal;\n      }\n      .c6 {\n        padding-top: 4pt;\n        padding-bottom: 0pt;\n        line-height: 1;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .c19 {\n        padding-top: 4pt;\n        padding-bottom: 0pt;\n        line-height: 1.2;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .c12 {\n        padding-top: 0pt;\n        padding-bottom: 0pt;\n        line-height: 1;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .c18 {\n        padding-top: 24pt;\n        padding-bottom: 10pt;\n        line-height: 1;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .c7 {\n        padding-top: 10pt;\n        padding-bottom: 0pt;\n        line-height: 1;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .c23 {\n        color: #353744;\n        text-decoration: none;\n        vertical-align: baseline;\n        font-size: 30pt;\n        font-style: normal;\n      }\n      .c22 {\n        color: #00ab44;\n        text-decoration: none;\n        vertical-align: baseline;\n        font-size: 18pt;\n        font-style: normal;\n      }\n      .c17 {\n        font-size: 14pt;\n        font-family: "Proxima Nova";\n        color: #00ab44;\n        font-weight: 700;\n      }\n      .c1 {\n        font-size: 12pt;\n        font-family: "Proxima Nova";\n        color: #353744;\n        font-weight: 400;\n      }\n      .c21 {\n        background-color: #ffffff;\n        max-width: 378pt;\n        padding: 36pt 162pt 36pt 72pt;\n      }\n      .c16 {\n        font-weight: 400;\n        font-family: "Proxima Nova";\n      }\n      .c13 {\n        padding: 0;\n        margin: 0;\n      }\n      .c20 {\n        color: #000000;\n      }\n      .c10 {\n        color: #666666;\n      }\n      .title {\n        padding-top: 6pt;\n        color: #353744;\n        font-size: 30pt;\n        padding-bottom: 0pt;\n        font-family: "Proxima Nova";\n        line-height: 1;\n        page-break-after: avoid;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      .subtitle {\n        padding-top: 0pt;\n        color: #00ab44;\n        font-size: 18pt;\n        padding-bottom: 0pt;\n        font-family: "Proxima Nova";\n        line-height: 1;\n        page-break-after: avoid;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      li {\n        color: #000000;\n        font-size: 11pt;\n        font-family: "Proxima Nova";\n      }\n      p {\n        margin: 0;\n        color: #000000;\n        font-size: 11pt;\n        font-family: "Proxima Nova";\n      }\n      h1 {\n        padding-top: 24pt;\n        color: #00ab44;\n        font-weight: 700;\n        font-size: 14pt;\n        padding-bottom: 10pt;\n        font-family: "Proxima Nova";\n        line-height: 1;\n        page-break-after: avoid;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      h2 {\n        padding-top: 10pt;\n        color: #353744;\n        font-weight: 700;\n        font-size: 12pt;\n        padding-bottom: 0pt;\n        font-family: "Proxima Nova";\n        line-height: 1;\n        page-break-after: avoid;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      h3 {\n        padding-top: 10pt;\n        color: #353744;\n        font-weight: 700;\n        font-size: 11pt;\n        padding-bottom: 0pt;\n        font-family: "Proxima Nova";\n        line-height: 1;\n        page-break-after: avoid;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      h4 {\n        padding-top: 8pt;\n        -webkit-text-decoration-skip: none;\n        color: #666666;\n        text-decoration: underline;\n        font-size: 11pt;\n        padding-bottom: 0pt;\n        line-height: 1.2;\n        page-break-after: avoid;\n        text-decoration-skip-ink: none;\n        font-family: "Trebuchet MS";\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      h5 {\n        padding-top: 8pt;\n        color: #666666;\n        font-size: 11pt;\n        padding-bottom: 0pt;\n        font-family: "Trebuchet MS";\n        line-height: 1.2;\n        page-break-after: avoid;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n      h6 {\n        padding-top: 8pt;\n        color: #666666;\n        font-size: 11pt;\n        padding-bottom: 0pt;\n        font-family: "Trebuchet MS";\n        line-height: 1.2;\n        page-break-after: avoid;\n        font-style: italic;\n        orphans: 2;\n        widows: 2;\n        text-align: left;\n      }\n    ',
             }}
-          >
-            <div
-              className="rela-block top-bar"
-              style={{
-                height: "220px",
-                backgroundColor: "#848484",
-                color: "white",
-              }}
-            >
-              <div
-                className="caps name"
+          />
+          <div>
+            <p className="c14">
+              <span className="c8" />
+            </p>
+            <p className="c6">
+              <span
                 style={{
-                 
-                  top: 0,
-                  left: 0,
-                  bottom: "calc(350px + 5%)",
-                  right: 0,
-                  height: "120px",
-                  textAlign: "center",
-                  fontFamily: "'Raleway', sans-serif",
-                  fontSize: "58px",
-                  letterSpacing: "8px",
-                  fontWeight: 100,
-                  lineHeight: "60px",
+                  overflow: "hidden",
+                  display: "inline-block",
+                  margin: "0px 0px",
+                  border: "0px solid #000000",
+                  transform: "rotate(0rad) translateZ(0px)",
+                  WebkitTransform: "rotate(0rad) translateZ(0px)",
+                  width: 624,
+                  height: "6.67px",
                 }}
               >
-                <div className="abs-center">Kyle J Shanks</div>
-              </div>
-            </div>
-            <div
-              className="side-bar"
-              style={{
-                position: "absolute",
-                top: "60px",
-                bottom: 0,
-                left: "5%",
-                right: 0,
-                width: "350px",
-                backgroundColor: "#F7E0C1",
-                padding: "320px 30px 50px",
-              }}
-            >
-              <div
-                className="mugshot"
-                style={{
-                  position: "absolute",
-                  top: "50px",
-                  left: 0,
-                  bottom: "70px",
-                  right: 0,
-                  height: "210px",
-                  width: "210px",
-                }}
-              >
-                <div
-                  className="logo"
+                <img
+                  alt=""
+                  src="images/image1.png"
                   style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0,
-                    zIndex: 100,
-                    margin: 0,
-                    color: "black",
-                    height: "250px",
-                    width: "250px",
+                    width: 624,
+                    height: "6.67px",
+                    marginLeft: 0,
+                    marginTop: 0,
+                    transform: "rotate(0rad) translateZ(0px)",
+                    WebkitTransform: "rotate(0rad) translateZ(0px)",
                   }}
-                >
-                  <svg
-                    viewBox="0 0 80 80"
-                    className="rela-block logo-svg"
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      stroke: "black",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <path
-                      d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z"
-                      strokeWidth="2.5"
-                      fill="none"
-                    />
-                  </svg>
-                  <p
-                    className="logo-text"
-                    style={{
-                      position: "absolute",
-                      top: "58%",
-                      left: "16%",
-                      cursor: "pointer",
-                      fontFamily: "'Montserrat', sans-serif",
-                      fontSize: "50px",
-                      fontWeight: 400,
-                    }}
-                  >
-                    kj
-                  </p>
-                </div>
-              </div>
-              <p>123 My Place Drive</p>
-              <p>Astoria, New York 11105</p>
-              <p>1-800-CALLPLZ</p>
-              <p>emailsareforsquares@gmail.com</p>
-              <br />
-              <p className="rela-block social twitter">Twitter stuff</p>
-              <p className="rela-block social pinterest">Pinterest things</p>
-              <p className="rela-block social linked-in">Linked-in man</p>
-              <p className="rela-block caps side-header">Expertise</p>
-              <p className="rela-block list-thing">HTML</p>
-              <p className="rela-block list-thing">CSS (Stylus)</p>
-              <p className="rela-block list-thing">JavaScript & jQuery</p>
-              <p className="rela-block list-thing">Killer Taste</p>
-              <p className="rela-block caps side-header">Education</p>
-              <p className="rela-block list-thing">Advanced potion making</p>
-              <p className="rela-block list-thing">
-                Degree in popping and locking
-              </p>
-              <p className="rela-block list-thing">Knitting game on point</p>
-              <p className="rela-block list-thing">Culinary af</p>
-            </div>
-            <div
-              className="rela-block content-container"
-              style={{
-                marginRight: 0,
-                width: "calc(95% - 350px)",
-                padding: "25px 40px 50px",
-              }}
-            >
-              <h2
-                className="rela-block caps title"
-                style={{
-                  width: "80%",
-                  textAlign: "center",
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontSize: "30px",
-                  letterSpacing: "5px",
-                  fontWeight: 600,
-                  lineHeight: "40px",
-                  color: "black",
-                }}
-              >
-                Jr Front-End Developer
-              </h2>
-              <div
-                className="rela-block separator"
-                style={{
-                  width: "240px",
-                  height: "2px",
-                  backgroundColor: "#999",
-                }}
-              ></div>
-              <div
-                className="rela-block caps greyed"
-                style={{
-                  backgroundColor: "#DDD",
-                  width: "100%",
-                  maxWidth: "580px",
-                  textAlign: "center",
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontSize: "18px",
-                  letterSpacing: "6px",
-                  fontWeight: 600,
-                  lineHeight: "28px",
-                  margin: "60px auto 10px",
-                  paddingBottom: "5px",
-                  borderBottom: "1px solid #888",
-                }}
-              >
-                Profile
-              </div>
-              <p
-                className="long-margin"
-                style={{
-                  textAlign: "justify",
-                  margin: "0 auto 50px",
-                }}
-              >
-                Retro DIY quinoa, mixtape williamsburg master cleanse bushwick
-                tumblr chillwave dreamcatcher hella wolf paleo. Knausgaard
-                semiotics truffaut cornhole hoodie, YOLO meggings gochujang
-                tofu. Locavore ugh kale chips iPhone biodiesel typewriter
-                freegan, kinfolk brooklyn kitsch man bun. Austin neutra etsy,
-                lumbersexual paleo cornhole sriracha kinfolk meggings
-                kickstarter.{" "}
-              </p>
-              <div
-                className="rela-block caps greyed"
-                style={{
-                  backgroundColor: "#DDD",
-                  width: "100%",
-                  maxWidth: "580px",
-                  textAlign: "center",
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontSize: "18px",
-                  letterSpacing: "6px",
-                  fontWeight: 600,
-                  lineHeight: "28px",
-                }}
-              >
-                Experience
-              </div>
-
-              <h3
-                style={{
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontSize: "21px",
-                  letterSpacing: "1px",
-                  fontWeight: 600,
-                  lineHeight: "28px",
-                  color: "black",
-                }}
-              >
-                Job #1
-              </h3>
-              <p
-                className="light"
-                style={{
-                  color: "#777",
-                }}
-              >
-                First job description
-              </p>
-              <p
-                className="justified"
-                style={{
-                  textAlign: "justify",
-                }}
-              >
-                Plaid gentrify put a bird on it, pickled XOXO farm-to-table
-                irony raw denim messenger bag leggings. Hoodie PBR&B photo
-                booth, vegan chillwave meh paleo freegan ramps. Letterpress
-                shabby chic fixie semiotics. Meditation sriracha banjo
-                pour-over. Gochujang pickled hashtag mixtape cred chambray.
-                Freegan microdosing VHS, 90's bicycle rights aesthetic hella
-                PBR&B.{" "}
-              </p>
-
-              <h3
-                style={{
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontSize: "21px",
-                  letterSpacing: "1px",
-                  fontWeight: 600,
-                  lineHeight: "28px",
-                  color: "black",
-                }}
-              >
-                Job #2
-              </h3>
-              <p
-                className="light"
-                style={{
-                  color: "#777",
-                }}
-              >
-                Second Job Description
-              </p>
-              <p
-                className="justified"
-                style={{
-                  textAlign: "justify",
-                }}
-              >
-                Beard before they sold out photo booth distillery health goth.
-                Hammock franzen green juice meggings, ethical sriracha tattooed
-                schlitz mixtape man bun stumptown swag whatever distillery blog.
-                Affogato iPhone normcore, meggings actually direct trade lomo
-                plaid franzen shoreditch. Photo booth pug paleo austin,
-                pour-over banh mi scenester vice food truck slow-carb. Street
-                art kogi normcore, vice everyday carry crucifix thundercats man
-                bun raw denim echo park pork belly helvetica vinyl.{" "}
-              </p>
-
-              <h3
-                style={{
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontSize: "21px",
-                  letterSpacing: "1px",
-                  fontWeight: 600,
-                  lineHeight: "28px",
-                  color: "black",
-                }}
-              >
-                Job #3
-              </h3>
-              <p
-                className="light"
-                style={{
-                  color: "#777",
-                }}
-              >
-                Third Job Description
-              </p>
-              <p
-                className="justified"
-                style={{
-                  textAlign: "justify",
-                }}
-              >
-                Next level roof party lo-fi fingerstache skateboard, kogi
-                tumblr. Shabby chic put a bird on it chambray, 3 wolf moon swag
-                beard brooklyn post-ironic taxidermy art party microdosing
-                keffiyeh marfa. Put a bird on it 3 wolf moon cliche helvetica
-                knausgaard. Mumblecore fingerstache lomo, artisan freegan
-                keffiyeh paleo kinfolk kale chips street art blog flannel.
-              </p>
-            </div>
+                  title="horizontal line"
+                />
+              </span>
+            </p>
           </div>
+          <p className="c0 title" id="h.5x0d5h95i329">
+            <span className="c16 c23">
+              {info.basicInfo?.detail?.name === ""
+                ? "Your Name"
+                : info.basicInfo?.detail?.name}
+            </span>
+          </p>
+          <p className="c12 subtitle" id="h.sbziogryzzql">
+            <span>{info.basicInfo?.detail?.title}</span>
+          </p>
+          <p className="c12">
+            <span className="c10">{info.basicInfo?.detail?.linkedin}</span>
+          </p>
+          <p className="c12">
+            <span className="c4">{info.basicInfo?.detail?.phone}</span>
+          </p>
+          <p className="c12">
+            <span className="c4">{info.basicInfo?.detail?.email}</span>
+          </p>
+          <h1 className="c3" id="h.inx73jfg7qti">
+            <span className="c9">SKILLS</span>
+          </h1>
+          <p className="c19">
+            <span className="c16">L</span>
+            <span>orem ipsum dol</span>
+            <span className="c16">
+              or sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </span>
+          </p>
+          <h1 className="c18" id="h.5sh58lh512k2">
+            <span className="c17">EXPERIENCE</span>
+          </h1>
+          {info.workExp?.details?.map((item) => {
+            return (
+              <div>
+                <h2 className="c7" id="h.mu43qcboozqe">
+                  <span className="c1">{item.companyName} &nbsp;Location</span>
+                  <span className="c2">&nbsp;- Job Title</span>
+                </h2>
+                <p className="c6">
+                  <span className="c15 c10">MONTH 20XX - PRESENT</span>
+                </p>
+                <ul className="c13 lst-kix_q43nwmkvrt8-0 start">
+                  <li className="c5 li-bullet-0">
+                    <span className="c8">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </span>
+                  </li>
+                  <li className="c5 li-bullet-0">
+                    <span className="c8">
+                      Aenean ac interdum nisi. Sed in consequat mi.
+                    </span>
+                  </li>
+                </ul>
+                <h2 className="c7" id="h.25ksbxwbal7a">
+                  <span className="c1">Company Name, Location</span>
+                  <span className="c2">&nbsp;- {item.title}</span>
+                </h2>
+                <p className="c6">
+                  <span className="c15 c10">MONTH 20XX - MONTH 20XX</span>
+                </p>
+                <ul className="c13 lst-kix_71cy10c6bo5c-0 start">
+                  <li className="c5 li-bullet-0">
+                    <span className="c8">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </span>
+                  </li>
+                  <li className="c5 li-bullet-0">
+                    <span className="c8">
+                      Aenean ac interdum nisi. Sed in consequat mi.{" "}
+                    </span>
+                  </li>
+                </ul>
+                <h2 className="c7" id="h.qttiqnuhschn">
+                  <span className="c1">Company Name, Location</span>
+                  <span className="c2">&nbsp;- Job Title</span>
+                </h2>
+                <p className="c6">
+                  <span className="c15 c10">MONTH 20XX - MONTH 20XX</span>
+                </p>
+                <ul className="c13 lst-kix_dpieomdpoi58-0 start">
+                  <li className="c5 li-bullet-0">
+                    <span className="c8">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </span>
+                  </li>
+                  <li className="c5 li-bullet-0">
+                    <span className="c8">
+                      Aenean ac interdum nisi. Sed in consequat mi.{" "}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            );
+          })}
+          <h1 className="c18" id="h.pwnp1k6vsbh1">
+            <span className="c9">EDUCATION</span>
+          </h1>
+          <h2 className="c7" id="h.jpv9v4b642w5">
+            <span className="c1">School Name, Location </span>
+            <span className="c2">- Degree</span>
+          </h2>
+          <p className="c6">
+            <span className="c10 c15">MONTH 20XX - MONTH 20XX</span>
+          </p>
+          <p className="c19">
+            <span className="c8">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore.
+            </span>
+          </p>
+          <h1 className="c18" id="h.3hy8rkwzatey">
+            <span className="c9">AWARDS</span>
+          </h1>
+          <p className="c19">
+            <span className="c8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </span>
+          </p>
+          <p className="c19">
+            <span className="c16">Aenean ac interdum nisi.</span>
+          </p>{" "}
         </div>
       );
-  
+
     default:
-      
   }
 
   return (
